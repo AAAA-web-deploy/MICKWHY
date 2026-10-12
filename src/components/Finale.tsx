@@ -33,6 +33,13 @@ export function Finale() {
             <p className="kicker">ACT VI</p>
             <h2>PERFORMANCE</h2>
             <p className="theme">THE STAGE BELONGS TO EVERYBODY.</p>
+            <Art
+              className="performance-art"
+              src="/assets/stage/performance-stage.webp"
+              alt="Mick the microphone points across a packed stage under the marquee PERFORMANCE, THE STAGE BELONGS TO EVERYBODY."
+              width={2048}
+              height={826}
+            />
             <SocialLinks />
           </div>
 

@@ -792,6 +792,15 @@ h2 {
   color: var(--amber);
 }
 
+.performance-art {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 0 1rem;
+  aspect-ratio: 2048 / 826;
+  object-fit: contain;
+}
+
 .cta-row {
   display: flex;
   flex-wrap: wrap;
@@ -1135,8 +1144,13 @@ h2 {
   }
 
   .finale-grid {
-    grid-template-columns: 1.05fr 0.95fr;
+    grid-template-columns: minmax(0, 1fr) minmax(22rem, 26rem);
     align-items: start;
+  }
+
+  .buy-card {
+    justify-self: end;
+    width: min(26rem, 100%);
   }
 }
 
