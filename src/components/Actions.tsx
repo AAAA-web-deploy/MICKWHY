@@ -18,20 +18,28 @@ export function ExternalOrSoon({ href, label }: { href: string; label: string })
   );
 }
 
-export function BuyLink({ href, ticker }: { href: string; ticker: string }) {
-  const url = safeHttpUrl(href);
-  if (!url) {
-    return (
-      <button type="button" className="btn btn-buy" disabled>
-        <span>BUY ${ticker}</span>
-        <span className="soon">COMING SOON</span>
-      </button>
-    );
-  }
+export function BuyLink({ ticker, address }: { ticker: string; address: string }) {
+  const [copied, setCopied] = useState(false);
+  const contract = address.trim();
+  const canCopy = isEthAddress(contract);
+
   return (
-    <a className="btn btn-buy" href={url} target="_blank" rel="noopener noreferrer">
-      BUY ${ticker}
-    </a>
+    <button
+      type="button"
+      className="btn btn-buy"
+      onClick={() => {
+        if (!canCopy) return;
+        navigator.clipboard
+          .writeText(contract)
+          .then(() => {
+            setCopied(true);
+            window.setTimeout(() => setCopied(false), 1800);
+          })
+          .catch(() => setCopied(false));
+      }}
+    >
+      {copied ? 'COPIED' : `BUY $${ticker}`}
+    </button>
   );
 }
 

@@ -74,7 +74,7 @@ export function Finale() {
             </dl>
             <div className="cta-row">
               <CopyButton address={site.contractAddress} />
-              <BuyLink href={site.dexUrl} ticker={site.ticker} />
+              <BuyLink ticker={site.ticker} address={site.contractAddress} />
               {explorer && validContract ? (
                 <a className="btn" href={explorer} target="_blank" rel="noopener noreferrer">
                   VIEW CONTRACT
