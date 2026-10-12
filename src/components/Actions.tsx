@@ -27,13 +27,18 @@ function SocialLink({
   href,
   label,
   kind,
+  compact = false,
 }: {
   href: string;
   label: string;
   kind: 'telegram' | 'x';
+  compact?: boolean;
 }) {
   const url = safeHttpUrl(href);
-  const content = (
+  const className = compact ? 'btn btn-social btn-social-icon' : 'btn btn-social';
+  const content = compact ? (
+    <SocialIcon kind={kind} />
+  ) : (
     <>
       <SocialIcon kind={kind} />
       <span>{label}</span>
@@ -41,23 +46,23 @@ function SocialLink({
   );
   if (!url) {
     return (
-      <button type="button" className="btn btn-social">
+      <button type="button" className={className} aria-label={label}>
         {content}
       </button>
     );
   }
   return (
-    <a className="btn btn-social" href={url} target="_blank" rel="noopener noreferrer">
+    <a className={className} href={url} target="_blank" rel="noopener noreferrer" aria-label={label}>
       {content}
     </a>
   );
 }
 
-export function SocialLinks() {
+export function SocialLinks({ compact = false }: { compact?: boolean }) {
   return (
-    <div className="cta-row social-row">
-      <SocialLink href={site.telegramUrl} label="TELEGRAM" kind="telegram" />
-      <SocialLink href={site.xUrl} label="X" kind="x" />
+    <div className={compact ? 'social-row social-row-compact' : 'cta-row social-row'}>
+      <SocialLink href={site.telegramUrl} label="TELEGRAM" kind="telegram" compact={compact} />
+      <SocialLink href={site.xUrl} label="X" kind="x" compact={compact} />
     </div>
   );
 }

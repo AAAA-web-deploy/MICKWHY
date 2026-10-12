@@ -95,11 +95,11 @@ export function Finale() {
         </div>
       </section>
       <footer className="colophon">
-        <div className="wrap">
-          <SocialLinks />
+        <div className="wrap footer-line">
           <p className="footer-mark">
             {site.tokenName} · ${site.ticker} · {site.chain}
           </p>
+          <SocialLinks compact />
         </div>
       </footer>
     </>
