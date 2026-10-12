@@ -798,6 +798,27 @@ h2 {
   gap: 0.6rem;
 }
 
+.btn-social {
+  flex-direction: row;
+  gap: 0.5rem;
+  min-width: 11.5rem;
+  background: transparent;
+  color: var(--cream);
+  border-color: var(--cream);
+  font-family: var(--display);
+  letter-spacing: 0.06em;
+}
+
+.btn-social:hover,
+.btn-social:focus-visible {
+  background: var(--cream);
+  color: var(--ink);
+}
+
+.colophon .social-row {
+  margin-bottom: 1rem;
+}
+
 .buy-card {
   background: var(--ink);
   color: var(--cream);

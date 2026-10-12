@@ -1,7 +1,7 @@
 import { site } from '../config/site';
 import { isEthAddress, safeHttpUrl } from '../lib/links';
 import { Art } from './Art';
-import { BuyLink, CopyButton, ExternalOrSoon } from './Actions';
+import { BuyLink, CopyButton, SocialLinks } from './Actions';
 
 const STEPS = [
   'Have ETH and gas in an Ethereum wallet.',
@@ -33,10 +33,7 @@ export function Finale() {
             <p className="kicker">ACT VI</p>
             <h2>PERFORMANCE</h2>
             <p className="theme">THE STAGE BELONGS TO EVERYBODY.</p>
-            <div className="cta-row">
-              <ExternalOrSoon href={site.xUrl} label="JOIN THE PERFORMANCE" />
-              <ExternalOrSoon href={site.telegramUrl} label="SUGGEST A TERRIBLE DUO" />
-            </div>
+            <SocialLinks />
           </div>
 
           <div id="buy" className="buy-card">
@@ -99,11 +96,7 @@ export function Finale() {
       </section>
       <footer className="colophon">
         <div className="wrap">
-          <p>
-            Independent parody/meme project. Satirical depictions do not imply endorsement by or
-            affiliation with public figures, companies, original performers or related IP owners.
-            Crypto assets are risky; no returns are promised.
-          </p>
+          <SocialLinks />
           <p className="footer-mark">
             {site.tokenName} · ${site.ticker} · {site.chain}
           </p>
