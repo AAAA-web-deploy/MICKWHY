@@ -2,7 +2,7 @@ export const site = {
   tokenName: 'MIC PICKED WHO?!',
   ticker: 'MICKWHY',
   chain: 'Ethereum mainnet',
-  contractAddress: '', // empty until owner provides the exact verified Ethereum address
+  contractAddress: '0xa995043c6771493c1bce7710b1886afa8f568e99',
   xUrl: '', // leave empty
   telegramUrl: '', // leave empty
   dexUrl: '', // leave empty

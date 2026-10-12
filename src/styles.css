@@ -883,16 +883,20 @@ h2 {
   width: 100%;
 }
 
-.contract-line .btn-copy {
-  margin-left: auto;
+.contract-line span,
+.contract-line code {
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .btn-copy {
+  flex: 0 0 auto;
   min-height: 44px;
   min-width: 44px;
   padding: 0.2rem 0.55rem;
   font-family: var(--text);
   font-weight: 800;
+  white-space: nowrap;
 }
 
 .facts dt {
