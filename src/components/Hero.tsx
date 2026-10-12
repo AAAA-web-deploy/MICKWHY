@@ -21,10 +21,10 @@ export function Hero() {
         <Art
           eager
           className="hero-art"
-          src="/assets/stage/hero-banner.jpg"
+          src="/assets/stage/hero-banner.webp"
           alt="Mick the microphone welcomes a mismatched guest lineup. The banner reads MIC PICKED WHO?!, $MICKWHY, one mic, zero standards."
-          width={1024}
-          height={341}
+          width={3072}
+          height={1023}
         />
         <div className="bulb-row" aria-hidden="true">
           {Array.from({ length: 16 }, (_, index) => (

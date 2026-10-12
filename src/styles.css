@@ -293,8 +293,9 @@ a {
 .hero-art {
   display: block;
   width: 100%;
-  aspect-ratio: 1024 / 341;
-  object-fit: cover;
+  height: auto;
+  aspect-ratio: 3072 / 1023;
+  object-fit: contain;
   background: var(--orange);
 }
 
