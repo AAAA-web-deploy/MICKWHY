@@ -955,25 +955,21 @@ h2 {
 }
 
 .footer-line .social-row-compact {
-  margin-left: 0;
-}
-
-.footer-actions {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
   margin-left: auto;
 }
 
 .btn-top {
-  flex-direction: row;
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 7;
+  width: 44px;
   min-width: 44px;
-  min-height: 44px;
-  padding: 0 0.75rem;
-  background: transparent;
+  height: 44px;
+  padding: 0;
+  background: var(--ink);
   color: var(--cream);
   border-color: var(--cream);
-  letter-spacing: 0.06em;
 }
 
 .btn-top:hover,

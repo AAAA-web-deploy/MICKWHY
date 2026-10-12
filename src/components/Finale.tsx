@@ -103,14 +103,20 @@ export function Finale() {
           <p className="footer-mark">
             {site.tokenName} · ${site.ticker} · {site.chain}
           </p>
-          <div className="footer-actions">
-            <SocialLinks compact />
-            <button type="button" className="btn btn-top" onClick={scrollToTop}>
-              TOP ↑
-            </button>
-          </div>
+          <SocialLinks compact />
         </div>
       </footer>
+      <button type="button" className="btn btn-top" onClick={scrollToTop} aria-label="Back to top">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+          <path
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2.4"
+            strokeLinecap="square"
+            d="M12 19V6M6 11l6-6 6 6"
+          />
+        </svg>
+      </button>
     </>
   );
 }
