@@ -1,0 +1,121 @@
+[
+  {
+    "path": "public/assets/identity/mick-approved-master.png",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 1716833,
+    "alpha": true
+  },
+  {
+    "path": "public/assets/identity/mick-approved-master.webp",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 107880,
+    "alpha": false
+  },
+  {
+    "path": "public/assets/identity/mick-circle-logo.webp",
+    "width": 950,
+    "height": 950,
+    "bytes": 108018,
+    "alpha": false
+  },
+  {
+    "path": "public/assets/identity/mick-face-badge.webp",
+    "width": 750,
+    "height": 750,
+    "bytes": 80110,
+    "alpha": false
+  },
+  {
+    "path": "public/assets/identity/mick-fullbody-cutout.webp",
+    "width": 1040,
+    "height": 1300,
+    "bytes": 219828,
+    "alpha": true
+  },
+  {
+    "path": "public/assets/memes/mick-gleeful.webp",
+    "width": 800,
+    "height": 847,
+    "bytes": 80904,
+    "alpha": false
+  },
+  {
+    "path": "public/assets/memes/mick-oh-no.webp",
+    "width": 800,
+    "height": 792,
+    "bytes": 76284,
+    "alpha": false
+  },
+  {
+    "path": "public/assets/memes/mick-smug.webp",
+    "width": 800,
+    "height": 879,
+    "bytes": 80412,
+    "alpha": false
+  },
+  {
+    "path": "public/assets/meta/apple-touch-icon.png",
+    "width": 180,
+    "height": 180,
+    "bytes": 55731,
+    "alpha": true
+  },
+  {
+    "path": "public/assets/meta/favicon-32.png",
+    "width": 32,
+    "height": 32,
+    "bytes": 2788,
+    "alpha": true
+  },
+  {
+    "path": "public/assets/meta/icon-512.png",
+    "width": 512,
+    "height": 512,
+    "bytes": 359703,
+    "alpha": true
+  },
+  {
+    "path": "public/assets/meta/optional-promotional-poster.webp",
+    "width": 1800,
+    "height": 600,
+    "bytes": 212176,
+    "alpha": false
+  },
+  {
+    "path": "public/assets/stage/bonus-crypto-guests-banner.webp",
+    "width": 1800,
+    "height": 600,
+    "bytes": 180258,
+    "alpha": false
+  },
+  {
+    "path": "public/assets/stage/bonus-meme-cast-banner.webp",
+    "width": 1800,
+    "height": 600,
+    "bytes": 201902,
+    "alpha": false
+  },
+  {
+    "path": "public/assets/stage/episode-01-cat-vs-bot.webp",
+    "width": 1440,
+    "height": 960,
+    "bytes": 143472,
+    "alpha": false
+  },
+  {
+    "path": "public/assets/stage/episode-02-tech-titans-parody.webp",
+    "width": 1440,
+    "height": 810,
+    "bytes": 137180,
+    "alpha": false
+  },
+  {
+    "path": "public/assets/stage/hero-stage-3x1.webp",
+    "width": 2000,
+    "height": 667,
+    "bytes": 162636,
+    "alpha": false
+  }
+]
