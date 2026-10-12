@@ -7,8 +7,9 @@ export const site = {
   telegramUrl: '', // leave empty
   dexUrl: '', // leave empty
   explorerUrl: '', // leave empty
-  totalSupply: null as number | null,
-  buyTax: null as number | null,
-  sellTax: null as number | null,
-  lpStatus: '',
+  totalSupply: 1000000000,
+  buyTax: 0,
+  sellTax: 0,
+  lpStatus: 'Burn',
+  ownershipStatus: 'Renounce',
 };

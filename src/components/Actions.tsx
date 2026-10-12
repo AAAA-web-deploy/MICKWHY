@@ -92,19 +92,19 @@ export function BuyLink({ ticker, address }: { ticker: string; address: string }
   );
 }
 
-export function CopyButton({ address }: { address: string }) {
+export function CopyButton({ address, compact = false }: { address: string; compact?: boolean }) {
   const [copied, setCopied] = useState(false);
-  if (!isEthAddress(address)) {
-    return <span className="chip">CONTRACT COMING SOON</span>;
-  }
+  const contract = address.trim();
+  const canCopy = isEthAddress(contract);
 
   return (
     <button
       type="button"
-      className="btn btn-buy"
+      className={compact ? 'btn btn-buy btn-copy' : 'btn btn-buy'}
       onClick={() => {
+        if (!canCopy) return;
         navigator.clipboard
-          .writeText(address.trim())
+          .writeText(contract)
           .then(() => {
             setCopied(true);
             window.setTimeout(() => setCopied(false), 1800);
@@ -112,7 +112,7 @@ export function CopyButton({ address }: { address: string }) {
           .catch(() => setCopied(false));
       }}
     >
-      {copied ? 'COPIED' : 'COPY CA'}
+      {copied ? 'COPIED' : 'COPY'}
     </button>
   );
 }

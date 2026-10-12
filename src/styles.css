@@ -851,10 +851,23 @@ h2 {
 
 .facts div {
   display: grid;
-  grid-template-columns: 8.5rem 1fr;
+  grid-template-columns: 10.25rem 1fr;
   gap: 0.6rem;
   padding: 0.45rem 0;
   border-bottom: 2px solid rgba(255, 244, 220, 0.2);
+}
+
+.contract-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.btn-copy {
+  min-height: 44px;
+  min-width: 44px;
+  padding: 0.2rem 0.55rem;
 }
 
 .facts dt {

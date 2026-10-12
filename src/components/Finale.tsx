@@ -15,6 +15,7 @@ function statusRows() {
     ['Buy tax', site.buyTax == null ? 'Not announced' : `${site.buyTax}%`],
     ['Sell tax', site.sellTax == null ? 'Not announced' : `${site.sellTax}%`],
     ['LP status', site.lpStatus.trim() ? site.lpStatus : 'Not announced'],
+    ['Ownership status', site.ownershipStatus.trim() ? site.ownershipStatus : 'Not announced'],
   ] as const;
 }
 
@@ -47,10 +48,6 @@ export function Finale() {
             <h2>HOW TO BUY</h2>
             <dl className="facts">
               <div>
-                <dt>Chain</dt>
-                <dd>{site.chain}</dd>
-              </div>
-              <div>
                 <dt>Token</dt>
                 <dd>{site.tokenName}</dd>
               </div>
@@ -60,7 +57,10 @@ export function Finale() {
               </div>
               <div>
                 <dt>Contract</dt>
-                <dd>{validContract ? <code>{contract}</code> : 'Coming soon'}</dd>
+                <dd className="contract-line">
+                  <span>{validContract ? <code>{contract}</code> : 'Coming soon'}</span>
+                  <CopyButton address={site.contractAddress} compact />
+                </dd>
               </div>
               {statusRows().map(([label, value]) => (
                 <div key={label}>
@@ -70,7 +70,6 @@ export function Finale() {
               ))}
             </dl>
             <div className="cta-row">
-              <CopyButton address={site.contractAddress} />
               <BuyLink ticker={site.ticker} address={site.contractAddress} />
               {explorer && validContract ? (
                 <a className="btn" href={explorer} target="_blank" rel="noopener noreferrer">
