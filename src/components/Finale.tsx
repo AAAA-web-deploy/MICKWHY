@@ -1,7 +1,7 @@
 import { site } from '../config/site';
 import { isEthAddress, safeHttpUrl } from '../lib/links';
 import { Art } from './Art';
-import { BuyLink, CopyButton, SocialLinks } from './Actions';
+import { CopyButton, SocialLinks } from './Actions';
 
 const STEPS = [
   'Have ETH and gas in an Ethereum wallet.',
@@ -22,7 +22,6 @@ function statusRows() {
 export function Finale() {
   const contract = site.contractAddress.trim();
   const validContract = isEthAddress(contract);
-  const explorer = safeHttpUrl(site.explorerUrl);
   const dex = safeHttpUrl(site.dexUrl);
 
   return (
@@ -38,14 +37,16 @@ export function Finale() {
           </div>
 
           <div id="buy" className="buy-card">
-            <Art
-              className="token-badge"
-              src="/assets/identity/mick-circle-logo.webp"
-              alt="Circular Mick token badge."
-              width={950}
-              height={950}
-            />
-            <h2>HOW TO BUY</h2>
+            <div className="token-head">
+              <Art
+                className="token-badge"
+                src="/assets/identity/mick-circle-logo.webp"
+                alt="Circular Mick token badge."
+                width={950}
+                height={950}
+              />
+              <h2>TOKENOMICS</h2>
+            </div>
             <dl className="facts">
               <div>
                 <dt>Token</dt>
@@ -69,14 +70,6 @@ export function Finale() {
                 </div>
               ))}
             </dl>
-            <div className="cta-row">
-              <BuyLink ticker={site.ticker} address={site.contractAddress} />
-              {explorer && validContract ? (
-                <a className="btn" href={explorer} target="_blank" rel="noopener noreferrer">
-                  VIEW CONTRACT
-                </a>
-              ) : null}
-            </div>
             <ol className="steps">
               {STEPS.map((step) => (
                 <li key={step}>{step}</li>

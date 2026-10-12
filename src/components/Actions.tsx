@@ -112,7 +112,7 @@ export function CopyButton({ address, compact = false }: { address: string; comp
           .catch(() => setCopied(false));
       }}
     >
-      {copied ? 'COPIED' : 'COPY'}
+      {copied ? 'copied' : 'COPY'}
     </button>
   );
 }

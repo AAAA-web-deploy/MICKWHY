@@ -833,16 +833,26 @@ h2 {
   padding: 1rem 1rem 1.2rem;
 }
 
+.token-head {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 0.8rem;
+}
+
 .token-badge {
   width: 92px;
   height: 92px;
+  flex: 0 0 auto;
   border-radius: 50%;
   object-fit: cover;
   background: var(--orange);
 }
 
 .buy-card h2 {
-  margin-top: 0.6rem;
+  margin: 0;
+  font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+  line-height: 0.9;
 }
 
 .facts {
@@ -859,15 +869,21 @@ h2 {
 
 .contract-line {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   gap: 0.45rem;
+  width: 100%;
+}
+
+.contract-line .btn-copy {
+  margin-left: auto;
 }
 
 .btn-copy {
   min-height: 44px;
   min-width: 44px;
   padding: 0.2rem 0.55rem;
+  font-family: var(--text);
+  font-weight: 800;
 }
 
 .facts dt {
