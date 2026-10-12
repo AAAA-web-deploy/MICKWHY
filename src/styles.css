@@ -139,19 +139,12 @@ a {
   padding: 0.45rem 0.2rem;
 }
 
-.headline {
-  display: flex;
-  align-items: center;
-  gap: 0.55rem;
-  margin-right: auto;
-  min-width: 0;
-}
-
 .brand {
   display: inline-flex;
   align-items: center;
   gap: 0.55rem;
   min-height: 44px;
+  margin-right: auto;
   color: var(--cream);
   text-decoration: none;
   font-family: var(--display);
@@ -189,7 +182,10 @@ a {
 .mast-actions {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
   gap: 0.4rem;
+  margin-left: auto;
 }
 
 .btn,

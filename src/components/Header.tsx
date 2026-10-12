@@ -18,18 +18,15 @@ export function Header() {
   return (
     <header className="mast" id="top">
       <div className="mast-inner">
-        <div className="headline">
-          <a className="brand" href="#top" onClick={scrollToTop}>
-            <img
-              src="/assets/identity/mick-face-badge.webp"
-              alt=""
-              width="750"
-              height="750"
-            />
-            <span>{site.tokenName}</span>
-          </a>
-          <SocialLinks compact />
-        </div>
+        <a className="brand" href="#top" onClick={scrollToTop}>
+          <img
+            src="/assets/identity/mick-face-badge.webp"
+            alt=""
+            width="750"
+            height="750"
+          />
+          <span>{site.tokenName}</span>
+        </a>
         <nav className="nav-links" aria-label="Show">
           {NAV.map((item) => (
             <a key={item.href} href={item.href}>
@@ -39,6 +36,7 @@ export function Header() {
         </nav>
         <div className="mast-actions">
           <BuyLink ticker={site.ticker} address={site.contractAddress} />
+          <SocialLinks compact />
         </div>
       </div>
     </header>
