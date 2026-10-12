@@ -1,6 +1,6 @@
 import type { MouseEvent } from 'react';
 import { site } from '../config/site';
-import { BuyLink } from './Actions';
+import { BuyLink, SocialLinks } from './Actions';
 
 const NAV = [
   { href: '#show', label: 'The Show' },
@@ -18,15 +18,18 @@ export function Header() {
   return (
     <header className="mast" id="top">
       <div className="mast-inner">
-        <a className="brand" href="#top" onClick={scrollToTop}>
-          <img
-            src="/assets/identity/mick-face-badge.webp"
-            alt=""
-            width="750"
-            height="750"
-          />
-          <span>{site.tokenName}</span>
-        </a>
+        <div className="headline">
+          <a className="brand" href="#top" onClick={scrollToTop}>
+            <img
+              src="/assets/identity/mick-face-badge.webp"
+              alt=""
+              width="750"
+              height="750"
+            />
+            <span>{site.tokenName}</span>
+          </a>
+          <SocialLinks compact />
+        </div>
         <nav className="nav-links" aria-label="Show">
           {NAV.map((item) => (
             <a key={item.href} href={item.href}>
