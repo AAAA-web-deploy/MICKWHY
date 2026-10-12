@@ -955,7 +955,31 @@ h2 {
 }
 
 .footer-line .social-row-compact {
+  margin-left: 0;
+}
+
+.footer-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
   margin-left: auto;
+}
+
+.btn-top {
+  flex-direction: row;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0 0.75rem;
+  background: transparent;
+  color: var(--cream);
+  border-color: var(--cream);
+  letter-spacing: 0.06em;
+}
+
+.btn-top:hover,
+.btn-top:focus-visible {
+  background: var(--cream);
+  color: var(--ink);
 }
 
 .lightbox {

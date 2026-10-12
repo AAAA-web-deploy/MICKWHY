@@ -3,6 +3,11 @@ import { isEthAddress, safeHttpUrl } from '../lib/links';
 import { Art } from './Art';
 import { CopyButton, SocialLinks } from './Actions';
 
+function scrollToTop() {
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+}
+
 const STEPS = [
   'Have ETH and gas in an Ethereum wallet.',
   'Verify the token contract from official sources.',
@@ -98,7 +103,12 @@ export function Finale() {
           <p className="footer-mark">
             {site.tokenName} · ${site.ticker} · {site.chain}
           </p>
-          <SocialLinks compact />
+          <div className="footer-actions">
+            <SocialLinks compact />
+            <button type="button" className="btn btn-top" onClick={scrollToTop}>
+              TOP ↑
+            </button>
+          </div>
         </div>
       </footer>
     </>
